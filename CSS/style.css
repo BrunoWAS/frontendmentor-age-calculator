@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --detalhes: hsl(259, 100%, 65%);
+    --erro: hsl(0, 100%, 67%);
+    --card: hsl(0, 0%, 100%);
+    --fundo: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+
+/* font-family: "Poppins", sans-serif; 400,700,800 */
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 3.2rem;
+    background-color: var(--fundo);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.card {
+    background-color: var(--card);
+    padding: 3rem;
+    border-radius: 1rem;
+    border-bottom-right-radius: 20rem;
+    height: 47.5rem;
+    width: 60rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card__form {
+    padding: 1.5rem;
+}
+
+.card__form label {
+    color: var(--Smokey-grey);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+.card__form input[type="text"] {
+    border-radius: 1rem;
+    opacity: 50%;
+    padding: 1.5rem;
+    width: 7.5rem;
+    border: 1px solid var(--Light-grey);
+    transition: border 0.3s ease;
+}
+
+.card__form input:focus {
+    border: 1px solid var(--detalhes);
+    outline: none;
+}
+
+.card__form input::placeholder {
+    font-weight: 800;
+    font-size: 1.7rem;
+}
+
+.card__form__container {
+    display: flex;
+    gap: 2rem;
+}
+
+.card__input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: flex-start;
+}
+
+.card__form__btn-container {
+    display: flex;
+    align-items: center;
+}
+
+.card__form__btn-part {
+    flex: 1;
+}
+
+.card__form__btn-part hr {
+    border-color: var(--Light-grey);
+}
+
+.card__form__button {
+    background-color: var(--detalhes);
+    border-radius: 100%;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card__form__button:hover {
+    background-color: black;
+}
+
+.card__form__button img {
+    transition: transform 0.5s ease;
+}
+
+.card__form__button:hover img {
+    transform: rotate(90deg);
+}
+
+.error-message {
+    color: var(--erro);
+    font-size: 1rem;
+    height: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.input-error {
+    border: 1px solid var(--erro);
+}
+
+.calc__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+.calc__container div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 800;
+    font-size: 7rem;
+}
+
+.calc__number {
+    color: var(--detalhes);
+    letter-spacing: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 70%;
+        padding: 2rem;
+    }
+
+    .calc__container div {
+        font-size: 6rem;
+    }
+}
